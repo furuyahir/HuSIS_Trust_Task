@@ -9,7 +9,7 @@ public class FOVConditions : MonoBehaviour
     public Transform upObj;
     public Transform downObj;
 
-    public Transform renderQuad;
+    //public Transform renderQuad;
 
     private float depth = 0.5f;
     public float HFOV = 60f;
@@ -49,7 +49,5 @@ public class FOVConditions : MonoBehaviour
         leftObj.localScale = new Vector3(leftObj.localScale.x, 2*yShift, leftObj.localScale.z);
         rightObj.localScale = new Vector3(rightObj.localScale.x, 2*yShift, rightObj.localScale.z);
 
-        // set the scale of the rendertexure to just fill the FOV
-        //renderQuad.localScale = new Vector3(Mathf.Tan(HFOV * Mathf.Deg2Rad / 2)*2, Mathf.Tan(VFOV * Mathf.Deg2Rad / 2)*2, 1);
     }
 }
