@@ -12,7 +12,7 @@ public class PointingTaskSetup : MonoBehaviour
     public List<GameObject> RaycastDirectionGameObjects;
     public GameObject Crosshair;
     public FOVConditions FOVConditionSetter;
-    public ResolutionConditions ResolutionConditionSetter;
+    public AEPostProcess ResolutionConditionSetter;
     
     public FoeIdentificationRunner foeIdentificationRunner;
     public PointingTaskVisualizationToggler PointingTaskVisualizationToggler;
@@ -63,5 +63,5 @@ public class PointingTaskSetupArgs
     public List<GameObject> RaycastDirectionGameObjects;
     public GameObject Crosshair;
     public FOVConditions FOVConditionSetter;
-    public ResolutionConditions ResolutionConditionSetter;
+    public AEPostProcess ResolutionConditionSetter;
 }

@@ -15,10 +15,10 @@ public class ARCondition
     public float xOffset = 0;
     public float yOffset = 0;
     public float zOffset = 0;
-    public float xRotationOffset = 0;
-    public float yRotationOffset = 0;
-    public float zRotationOffset = 0;
+    public float xOrient = 0;
+    public float yOrient = 0;
+    public float zOrient = 0;
 
     // opacity variables
-    public float opacityRange = 1f;
+    public float opacityLevel = 1f;
 }

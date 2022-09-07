@@ -10,7 +10,7 @@ public class PointingTaskVisualizationToggler : MonoBehaviour
     private Dictionary<PointingTaskTarget, string> TargetNames;
 
     private FOVConditions FOVConditionSetter;
-    private ResolutionConditions ResolutionConditionSetter;
+    private AEPostProcess ResolutionConditionSetter;
 
     public void SetArguments(PointingTaskSetupArgs args)
     {
@@ -72,10 +72,10 @@ public class PointingTaskVisualizationToggler : MonoBehaviour
         ResolutionConditionSetter.xOffset = a.xOffset;
         ResolutionConditionSetter.yOffset = a.yOffset;
         ResolutionConditionSetter.zOffset = a.zOffset;
-        ResolutionConditionSetter.xRotationOffset = a.xRotationOffset;
-        ResolutionConditionSetter.yRotationOffset = a.yRotationOffset;
-        ResolutionConditionSetter.zRotationOffset = a.zRotationOffset;
-        ResolutionConditionSetter.opacityRange = a.opacityRange;
+        ResolutionConditionSetter.xOrient = a.xOrient;
+        ResolutionConditionSetter.yOrient = a.yOrient;
+        ResolutionConditionSetter.zOrient = a.zOrient;
+        ResolutionConditionSetter.opacityLevel = a.opacityLevel;
     }
 
     private void TurnOffVisualizations()
