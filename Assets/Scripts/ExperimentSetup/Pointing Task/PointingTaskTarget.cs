@@ -18,4 +18,9 @@ public class PointingTaskTarget : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
+    public void ToggleOutline(bool on)
+    {
+        Debug.Log($"{name} outline {on}");
+    }
 }

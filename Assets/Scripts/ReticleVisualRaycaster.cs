@@ -23,10 +23,15 @@ public class ReticleVisualRaycaster : MonoBehaviour
     {
         RaycastHit hitInfo;
         int layer = 1 << LayerMask.NameToLayer(RaycastLayerName);
-        if (Physics.Raycast(RaySourceTransform.position, RaySourceTransform.forward, out hitInfo, Mathf.Infinity, layer))
+        if (Physics.Raycast(GetRay(), out hitInfo, Mathf.Infinity, layer))
         {
             Visual.transform.position = hitInfo.point;
             Visual.transform.LookAt(VisualLookAtTransform);
         }    
+    }
+
+    public Ray GetRay()
+    {
+        return new Ray(RaySourceTransform.position, RaySourceTransform.forward);
     }
 }

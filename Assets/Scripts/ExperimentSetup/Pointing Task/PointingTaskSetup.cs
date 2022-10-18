@@ -17,6 +17,8 @@ public class PointingTaskSetup : MonoBehaviour
     public FoeIdentificationRunner foeIdentificationRunner;
     public PointingTaskVisualizationToggler PointingTaskVisualizationToggler;
     public TargetGenerator TargetGenerator;
+    public TargetHighlighter TargetHighlighter;
+    public ReticleVisualRaycaster ReticleVisualRaycaster;
 
 
     public PointingTaskSetupArgs GetTutorialSetup()
@@ -29,6 +31,7 @@ public class PointingTaskSetup : MonoBehaviour
         args.TargetGenerator = TargetGenerator;
         args.FOVConditionSetter = FOVConditionSetter;
         args.ResolutionConditionSetter = ResolutionConditionSetter;
+        args.Raycaster = ReticleVisualRaycaster;
         return args;
     }
     
@@ -42,6 +45,7 @@ public class PointingTaskSetup : MonoBehaviour
         args.TargetGenerator = TargetGenerator;
         args.FOVConditionSetter = FOVConditionSetter;
         args.ResolutionConditionSetter = ResolutionConditionSetter;
+        args.Raycaster = ReticleVisualRaycaster;
         return args;
     }
 
@@ -50,7 +54,7 @@ public class PointingTaskSetup : MonoBehaviour
     {
         TaskAudioFeedback.Setup(foeIdentificationRunner, ExperimentRunner);
         ExperimentRunner.SetArguments(PointingTaskVisualizationToggler, foeIdentificationRunner, GetTutorialSetup(), GetTestSetup());
-
+        TargetHighlighter.Setup(foeIdentificationRunner);
         Crosshair.SetActive(false);
     }
 }
@@ -64,4 +68,5 @@ public class PointingTaskSetupArgs
     public GameObject Crosshair;
     public FOVConditions FOVConditionSetter;
     public AEPostProcess ResolutionConditionSetter;
+    public ReticleVisualRaycaster Raycaster;
 }
